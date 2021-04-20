@@ -125,26 +125,16 @@ img{
 .navbar-nav li a.active
 {
     color: var(--special-color) !important;
+     border-bottom: 1px solid var(--special-color);
+     font-weight: bold;
 }
 .navbar-nav li{
     margin-left: 3px;
     overflow: hidden;
 }
-.navbar-nav li a::before{
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: var(--special-color);
-    top: 50%;
-    right: 100%;
-    transform: rotate(-12deg);
-    transition: .5s all ease;
-}
-.navbar-nav li a:hover::before,
-.navbar-nav li a.active::before
+.navbar-nav li a.active
 {
-    right: 0;
+  
 }
 .fixed{
     background-color: #202020 !important;
@@ -155,11 +145,7 @@ img{
     .navbar{
         background: #202020 !important;
     }
-    .navbar-nav li a:hover::before,
-    .navbar-nav li a.active::before
-    {
-        display: none;
-    }
+    
 }
 /*==================================
     3. Hero CSS
@@ -357,70 +343,6 @@ img{
 }
 
 /*--------------------------------------------------------------
-# Project
---------------------------------------------------------------*/
-/*.project .project-title {
-  font-size: 26px;
-  font-weight: 400;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #222222;
-}
-
-.project .project-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid #34b7a7;
-  position: relative;
-}
-
-.project .project-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #1d685f;
-  margin-bottom: 10px;
-}
-.project .project-item .font-small{
-   font-size: 15px; 
-}
-
-.project .project-item h5 {
-  font-size: 16px;
-  background: #effbf9;
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #34b7a7;
-}
-
-.project .project-item ul {
-  padding-left: 20px;
-}
-
-.project .project-item ul li {
-  padding-bottom: 10px;
-}
-
-.project .project-item:last-child {
-  padding-bottom: 0;
-}
-
-.project .project-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #fff;
-  border: 2px solid #34b7a7;
-}
-*/
-/*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
@@ -533,4 +455,5 @@ img{
         float: left !important
     }
 }
+
 
