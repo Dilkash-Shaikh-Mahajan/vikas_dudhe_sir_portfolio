@@ -1,0 +1,533 @@
+/* poppins */
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+/* muli */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+:root{
+    --body-font: 'Muli', sans-serif;
+    --title-font: 'Poppins', sans-serif;
+    --primary-bg: #FFF;
+    --secondary-bg: #F7F7F7;
+    --primary-text-color: #212529;
+    --secondary-text-color: #6C757D;
+    --special-color: #E24727;
+}
+/*==================================
+    1. Default CSS
+====================================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+.bg_primary_colour{
+    background-color: #f6b25d;
+}
+.bg_primary{
+    background-color: var(--primary-bg);
+}
+.bg_secondary{
+    background-color: var(--secondary-bg);
+}
+body{
+    font-family: var(--body-font);
+   
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--title-font);
+    color: var(--primary-text-color);
+    font-weight: 500;
+    line-height: 1.5;
+}
+p{
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 32px;
+}
+h3{
+    font-size: 28px;
+}
+h4{
+    font-size: 24px;
+}
+h5{
+    font-size: 20px;
+}
+h6{
+    font-size: 18px;
+}
+
+p{
+    margin-bottom: 0!important
+}
+a,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+
+.py-70{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+img{
+    width: 100%;
+    height: auto
+}
+#preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FFF;
+    display: flex;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+.preloaded{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*==================================
+    2. Header CSS
+====================================*/
+.navbar{
+    padding-top: 20px;
+    z-index: 50;
+    background: transparent !important;
+}
+ 
+.navbar-nav li a{
+    color: #fff !important;
+    position: relative;
+    transition: .5s all ease;
+}
+.navbar-nav li a:hover,
+.navbar-nav li a.active
+{
+    color: var(--special-color) !important;
+}
+.navbar-nav li{
+    margin-left: 3px;
+    overflow: hidden;
+}
+.navbar-nav li a::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--special-color);
+    top: 50%;
+    right: 100%;
+    transform: rotate(-12deg);
+    transition: .5s all ease;
+}
+.navbar-nav li a:hover::before,
+.navbar-nav li a.active::before
+{
+    right: 0;
+}
+.fixed{
+    background-color: #202020 !important;
+    padding: 5px;
+    transition: 1s ease;
+}
+@media screen and (max-width: 990px){
+    .navbar{
+        background: #202020 !important;
+    }
+    .navbar-nav li a:hover::before,
+    .navbar-nav li a.active::before
+    {
+        display: none;
+    }
+}
+/*==================================
+    3. Hero CSS
+====================================*/
+#home{
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    position: relative;
+}
+.next-section{
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    transform: translate(50%, 0%);
+}
+.next-section a{
+    color: #fff;
+    padding: 16px 21px 0px 21px;
+    border-top: 2px solid #FFF;
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+    transition: all .5s ease-in;
+}
+.next-section a:hover{
+    color: var(--special-color);
+    border-color: var(--special-color);
+}
+.next-section i{
+    animation: bounce 2s infinite 2s;
+}
+@keyframes bounce{
+    
+    0%,
+    100%,
+    20%,
+    50%,
+    80%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-10px);
+    }
+    60%{
+        transform: translateY(-5px);
+    }
+}
+.home-content{
+    height: 100%;
+}
+
+.home-content .hello{
+    color: #fff;
+    font-family: var(--title-font);
+    
+}
+.home-content .hello span{
+    color: var(--special-color);
+}
+.home-content .intro h1 {
+    color: #FFF;
+    font-size: 35px;
+}
+.home-content .desc{
+    color: #B9B9B9;
+    display: block;
+    max-width: 40%;
+}
+.home-content .home-para{
+    font-size: 0.9rem !important;
+}
+.hire a{
+    position: relative;
+    color: #FFF;
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    font-size: 9px;
+    letter-spacing: 2px;
+    background-color: var(--special-color);
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: all .2s;
+    z-index: 2;
+}
+.hire a:hover{
+    background-color: #BB3D23;
+}
+.hire a::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: var(--special-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 25px;
+    transition: all .5s;
+}
+.hire a:hover::after{
+    transform: scaleX(1.4) scaleY(1.3);
+    opacity: 0;
+}
+.intro-skill h5{
+    color: #FFF;
+}
+@media screen and (max-width: 430px){
+    .home-content .intro h1 {
+    font-size: 30px;
+}
+    .home-content .desc{
+        max-width: 100%;
+    }
+}
+/*==================================
+    4. About CSS
+====================================*/
+
+.section-title h2{
+    position: relative;
+    margin-bottom: 0 !important;
+    display: inline-block;
+    z-index: 5;
+}
+.section-title h2::first-letter{
+    color: var(--special-color);
+    font-weight: bold;
+    font-size: 50px;
+}
+.section-title h2::after{
+    content: '';
+    position: absolute;
+    height:35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: var(--special-color);
+    right: -18px;
+    bottom: 30%;
+    z-index: -1;
+    opacity: .6;
+    animation: title 3s ease-in-out infinite;
+}
+@keyframes title{
+    0%{
+        transform: translateX(5px);
+    }
+    50%{
+        transform: translateX(0);
+        transform: scale(1.2);
+    }
+    100%{
+        transform: translateX(5px);
+    }
+}
+.section-title p{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    margin-left: 7px;
+    display: inline-block;
+}
+.section-title p::before{
+    content: '';
+    position: absolute;
+    height: 60%;
+    width: 2px;
+    background-color: var(--special-color);
+    bottom: 5px;
+    left: -7px;
+}
+.about-contacts i{
+    color: var(--special-color);
+}
+.social-link a{
+    padding: 0 8px;
+}
+.social-link a i{
+    color: var(--primary-text-color);
+    transition: color .2s ease;
+}
+.social-link a i:hover{
+    color: var(--special-color);
+    
+}
+.mail-icon{
+    margin-left: 2px
+}
+.skills{
+    font-size: 0.8rem;
+    margin-top:10px;
+    margin-bottom: 0.5rem !important
+}
+
+/*--------------------------------------------------------------
+# Project
+--------------------------------------------------------------*/
+/*.project .project-title {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #222222;
+}
+
+.project .project-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #34b7a7;
+  position: relative;
+}
+
+.project .project-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #1d685f;
+  margin-bottom: 10px;
+}
+.project .project-item .font-small{
+   font-size: 15px; 
+}
+
+.project .project-item h5 {
+  font-size: 16px;
+  background: #effbf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #34b7a7;
+}
+
+.project .project-item ul {
+  padding-left: 20px;
+}
+
+.project .project-item ul li {
+  padding-bottom: 10px;
+}
+
+.project .project-item:last-child {
+  padding-bottom: 0;
+}
+
+.project .project-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #34b7a7;
+}
+*/
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #34b7a7;
+  position: relative;
+}
+
+.portfolio .portfolio-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #1d685f;
+  margin-bottom: 10px;
+}
+.portfolio .portfolio-item .font-small{
+   font-size: 15px; 
+}
+
+.portfolio .portfolio-item h5 {
+  font-size: 16px;
+  background: #effbf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #34b7a7;
+}
+
+.portfolio .portfolio-item ul {
+  padding-left: 20px;
+}
+
+.portfolio .portfolio-item ul li {
+  padding-bottom: 10px;
+}
+
+.portfolio .portfolio-item:last-child {
+  padding-bottom: 0;
+}
+
+.portfolio .portfolio-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #34b7a7;
+}
+
+
+
+/*==================================
+    5. Portfolio CSS
+====================================*/
+.skill .val {
+  float: right;
+ 
+}
+
+/*==================================
+    7. Contact CSS
+====================================*/
+
+.contact-form input,
+.contact-form textarea
+{
+    
+    font-size: 14px;
+    
+}
+.form-submit button.btn-submit{
+    border: none;
+    background: var(--special-color);
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #FFF;
+    border-radius: 25px;
+    transition: .2s ease;
+}
+
+.form-submit button.btn-submit:hover {
+    background: #BB3D23;
+}
+
+/*==================================
+    8. Footer CSS
+====================================*/
+
+@media screen and (max-width: 426px){
+    .footer-content p{
+        font-size: 12px !important;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 426px){
+   .portfolio-item .float_right{
+        float: left !important
+    }
+}
+
