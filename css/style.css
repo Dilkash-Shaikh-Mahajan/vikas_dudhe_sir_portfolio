@@ -321,6 +321,7 @@ img{
 }
 .text-muted{
     font-size:13px !important;
+}
 .about-contacts i{
     color: var(--special-color);
 }
