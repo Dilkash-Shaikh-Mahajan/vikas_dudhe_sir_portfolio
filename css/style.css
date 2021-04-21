@@ -145,6 +145,11 @@ img{
     .navbar{
         background: #202020 !important;
     }
+    .navbar-nav li a:hover,
+    .navbar-nav li a.active
+    {
+        border-bottom: none;  
+    }
     
 }
 /*==================================
