@@ -44,7 +44,7 @@
     /**
      * 3. Background image
      */
-    $("#home").css('background-image', 'url(' + 'assets/images/background/bgi.jpg' + ')');
+    $("#home").css('background-image', 'url(' + 'assets/images/background/bgi.png' + ')');
 
     /**
      * 4. Isotope JS
@@ -105,31 +105,4 @@
   } // End if
 });
 
-
-
-
 })(jQuery);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
